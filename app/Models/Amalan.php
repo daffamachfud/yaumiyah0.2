@@ -11,7 +11,11 @@ class Amalan extends Model
 
     protected $table = 'amalan';
 
+    protected $fillable = [
+        'id','businessType_id', 'user_id', 'name' ,'phone_number','email',
+    ];
+
     public function user(){
-    	return $this->belongsTo('App\User');
+    	return $this->belongsTo('App\Models\User');
     }
 }
