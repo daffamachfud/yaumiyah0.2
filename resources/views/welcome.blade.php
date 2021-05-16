@@ -15,27 +15,109 @@
         </style>
 
         <style>
-            body {
-                font-family: 'Nunito', sans-serif; 
-                 background-image:url({{url('img/background-yaumi.jpg')}});
-                 background-repeat: no-repeat;
-                 background-size: cover;
-            }
 
-            @media (max-width:  500px){
-                body{
-                    background-image:url({{url('img/background-yaumi-mobile.jpg')}});
-                 background-repeat: no-repeat;
-                 background-size: cover;
+            @media only screen and (min-width: 1200px) {
+                body {
+                    font-family: 'Nunito', sans-serif; 
+                    background-image:url({{url('img/background-yaumi.jpg')}});
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                 }
+
+                .button-container-div {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    margin-top:25%;
+                    align-items: center;
                 }
             }
+
+            @media only screen and (min-width: 992px) {
+                body {
+                    font-family: 'Nunito', sans-serif; 
+                    background-image:url({{url('img/background-yaumi.jpg')}});
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                 }
+
+                .button-container-div {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }    
+            }
+
+            @media only screen and (min-width: 768px) {
+                body {
+                    font-family: 'Nunito', sans-serif; 
+                    background-image:url({{url('img/background-yaumi.jpg')}});
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                 }
+
+                .button-container-div {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .button-container-div a{
+                  width:300px;
+                  height:70px;
+                  text-align: center;
+                  font-size:22px;   
+                  padding:15px;   
+                }    
+            }
+
+            @media only screen and (min-width: 600px) {
+                body {
+                    font-family: 'Nunito', sans-serif; 
+                    background-image:url({{url('img/background-yaumi.jpg')}});
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                 }
+
+                .button-container-div {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }    
+            }
+
+            @media only screen and (max-width: 600px) {
+                body {
+                    font-family: 'Nunito', sans-serif; 
+                    background-image:url({{url('img/background-yaumi-mobile.jpg')}});
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                 }
+
+                .button-container-div {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    margin-top:80%;
+                    justify-content: center;
+                    align-items: center;
+                }    
+            }
+
         </style>
 
     </head>
     <body class="antialiased">
         <div>
             @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+            <div class="button-container-div">
                     
                     @auth
                     @if (auth()->user()->is_admin == 1)
@@ -46,6 +128,8 @@
                     @else
                         <a href="{{ route('login') }}" class="btn btn-dark">Log in</a>
                     @endauth
+
+                    </div>        
                 </div>
             @endif
 
