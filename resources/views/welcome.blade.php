@@ -22,7 +22,7 @@
                  background-size: cover;
             }
 
-            @media (max-width:  320px){
+            @media (max-width:  500px){
                 body{
                     background-image:url({{url('img/background-yaumi-mobile.jpg')}});
                  background-repeat: no-repeat;

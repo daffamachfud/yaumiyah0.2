@@ -37,7 +37,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-6">
                                         <button type="submit" class="btn btn-dark">
-                                            <i class="fa fa-plus"></i> Tambah Amalan
+                                             Tambah Amalan
                                         </button>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@
                                     {{ method_field('DELETE') }}
 
                                     <button type="submit" class="btn btn-danger">
-                                        <i class="fa fa-plus"></i> Hapus
+                                     Hapus
                                     </button>
                                 </form>
                                 </td>
